@@ -1,10 +1,36 @@
 
 import './App.css';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import Root from './Root';
+import Home from './Components/Home/Home';
+import Signin from './Pages/Signin';
+import Signup from './Pages/Signup';
 
 function App() {
+  let router=createBrowserRouter([{
+    path:'',
+    element:<Root/>,
+    children:[
+      {
+        path:'',
+        element:<Home/>,
+        
+      },
+      {
+        path:'/signup',
+        element:<Signup/>,
+      }
+      ,
+      {
+        path:'/signin',
+        element:<Signin/>
+      }
+    ]
+  }])
+
   return (
     <div className="App">
-      <h1 className='text-info'>Welcome</h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main{
+   
+    height: 8vh;
+    align-items: center;
+}
+
+#image{
+    width: 70px;
+    height: 50px;
+}
+.nav-link-hover:hover{
+    color: red;
+}
