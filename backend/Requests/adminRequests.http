@@ -1,0 +1,22 @@
+//Admin registration route
+###
+POST http://localhost:4000/adminapi/admin
+Content-Type: application/json
+
+{
+    "userType":"admin",
+    "username":"vikas2",
+    "password":"vikas2",
+    "email":"vikas2@gmail.com"
+}
+
+###
+//Author login route
+POST http://localhost:4000/adminapi/login
+Content-Type: application/json
+
+{
+    "userType":"admin",
+    "username":"vikas2",
+    "password":"vikas2"
+}
